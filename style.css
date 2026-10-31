@@ -1,0 +1,439 @@
+
+/* ===== WARNA DASAR ===== */
+:root {
+    --primary: #123b70;
+    --secondary: #246fbd;
+    --accent: #61b8ff;
+    --light: #edf6ff;
+    --text: #26384d;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    background: #f5f9ff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: rgba(10, 36, 72, 0.97);
+    padding: 13px 0;
+    box-shadow: 0 4px 20px rgba(5, 30, 65, 0.15);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navbar-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    color: #d8eaff;
+    font-weight: 500;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent);
+}
+
+.navbar-toggler {
+    border: 1px solid #8fcaff;
+}
+
+/* ===== HERO / BANNER ===== */
+.hero {
+    min-height: 570px;
+    padding: 150px 0 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 25%,
+        rgba(74, 157, 255, 0.4), transparent 28%),
+        linear-gradient(120deg, #071c3b, #123b70 55%, #1769aa);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -100px;
+    bottom: -180px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, 0.04),
+        0 0 0 90px rgba(255, 255, 255, 0.03);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("images/background/bgwhite.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.04;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    color: #c7e5ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #79c7ff;
+}
+
+.hero-content p {
+    max-width: 520px;
+    color: #d9eaff;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: #fff;
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #cde8ff;
+    color: #071c3b;
+    transform: translateY(-3px);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: #f5f9ff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+}
+
+/* ===== SECTION ===== */
+.section-padding {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    color: var(--primary);
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #718096;
+}
+
+/* ===== PROFIL SEKOLAH ===== */
+.profile-box {
+    height: 100%;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #dfebf8;
+    box-shadow: 0 10px 35px rgba(18, 59, 112, 0.07);
+}
+
+.profile-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #e5f2ff;
+    color: var(--secondary);
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.profile-box h3 {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.profile-box p {
+    color: #63758a;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* ===== POIN PROFIL ===== */
+.profile-points {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.point {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #dfebf8;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.point:hover {
+    border-color: #7abaff;
+    transform: translateX(5px);
+}
+
+.point > i {
+    color: var(--secondary);
+    font-size: 28px;
+}
+
+.point h4 {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.point p {
+    color: #718096;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== KARTU KEGIATAN ===== */
+.content-card {
+    height: 100%;
+    padding: 30px 25px;
+    background: white;
+    border: 1px solid #dfebf8;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(18, 59, 112, 0.06);
+    transition: 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(18, 59, 112, 0.12);
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5f2ff;
+    color: var(--secondary);
+    border-radius: 14px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content-card h2 {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.content-card p {
+    color: #718096;
+    line-height: 1.8;
+}
+
+.content-card .btn-success {
+    background: var(--primary);
+    border-color: var(--primary);
+    border-radius: 7px;
+    padding: 10px 17px;
+}
+
+.content-card .btn-success:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* ===== FOOTER ===== */
+.school-footer {
+    padding: 28px 0;
+    color: #d9eaff;
+    background: #091f40;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand img {
+    object-fit: contain;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #c4e3ff;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #61b8ff;
+}
+
+/* ===== TAMPILAN HP ===== */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 130px 0 90px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .profile-box {
+        padding: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+/* FIX: HILANGKAN SEMUA WARNA HIJAU */
+
+:root {
+    --primary: #123b70;
+    --secondary: #246fbd;
+    --accent: #61b8ff;
+}
+
+/* Navbar */
+.navbar {
+    background: #0b1f40 !important;
+}
+
+/* Header dan banner */
+.hero {
+    background: linear-gradient(135deg, #081b38, #123b70, #2878bd) !important;
+}
+
+/* Judul dan ikon */
+.section-heading span,
+.profile-icon,
+.point > i,
+.card-icon {
+    color: #246fbd !important;
+}
+
+/* Tombol */
+.btn-success,
+.content-card .btn-success {
+    background-color: #123b70 !important;
+    border-color: #123b70 !important;
+    color: #ffffff !important;
+}
+
+.btn-success:hover,
+.content-card .btn-success:hover {
+    background-color: #246fbd !important;
+    border-color: #246fbd !important;
+}
+
+/* Footer */
+.school-footer {
+    background-color: #091f40 !important;
+}
+
+/* Tautan ikon */
+.social-icons a {
+    color: #61b8ff !important;
+}
